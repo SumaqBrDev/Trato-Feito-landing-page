@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trato Feito Pomerode — Eletrônicos Novos e Seminovos | Assistência Técnica</title>
+  <meta name="description" content="Loja especializada em produtos eletrônicos novos e seminovos em Pomerode SC. Celulares iPhone e Samsung, JBL, acessórios e assistência técnica. Fale no WhatsApp!">
+  <meta property="og:title" content="Trato Feito Pomerode — Eletrônicos com preço justo">
+  <meta property="og:description" content="Celulares novos e seminovos, JBL, acessórios e assistência técnica no centro de Pomerode SC.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectronicsStore",
+    "name": "Trato Feito Pomerode",
+    "description": "Loja especializada em produtos eletrônicos novos e seminovos",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Luiz Abry, 1393, Sala 05",
+      "addressLocality": "Pomerode",
+      "addressRegion": "SC",
+      "postalCode": "89107-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+5547996534397",
+    "email": "lojatratofeitopomerode@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/lojatratofeito/",
+      "https://www.facebook.com/lojatratofeitopomerode/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      /* Cores */
+      --color-primary: #0066CC;
+      --color-primary-dark: #003D7A;
+      --color-primary-light: #E8F0FB;
+      --color-accent: #FF6B00;
+      --color-accent-light: #FFF3E8;
+      --color-bg-white: #FFFFFF;
+      --color-bg-light: #F4F6F9;
+      --color-bg-dark: #003D7A;
+      --color-text-primary: #2D3142;
+      --color-text-secondary: #6B7280;
+      --color-text-white: #FFFFFF;
+      --color-success: #16A34A;
+      --color-border: #E5E7EB;
+      --color-whatsapp: #25D366;
+      --color-whatsapp-dark: #1EA952;
+      
+      /* Tipografia */
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Espaçamentos */
+      --section-padding-desktop: 96px 48px;
+      --section-padding-mobile: 64px 16px;
+      --card-radius: 12px;
+      --btn-radius: 8px;
+      --pill-radius: 999px;
+      
+      /* Sombras */
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 8px 24px rgba(0,102,204,0.15);
+      --shadow-navbar: 0 1px 4px rgba(0,0,0,0.08);
+      --shadow-ambient: 0 12px 32px rgba(0,102,204,0.08); /* Inspired by "Precision Architect" ambient shadow */
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--color-text-primary); line-height: 1.6; background-color: var(--color-bg-light); overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    
+    .container { max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 24px; }
+    
+    /* Reveal Animation Class */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* --- Buttons --- */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: var(--btn-radius); font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border: none; }
+    .btn-wpp { background: linear-gradient(135deg, var(--color-whatsapp) 0%, var(--color-whatsapp-dark) 100%); color: var(--color-text-white); box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4); }
+    .btn-wpp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+    .btn-secondary { background: var(--color-bg-white); color: var(--color-primary); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .btn-secondary:hover { background: var(--color-bg-light); color: var(--color-primary-dark); }
+    .btn-ghost { background: transparent; color: var(--color-primary); }
+    .btn-ghost:hover { background: var(--color-primary-light); }
+
+    /* --- Navbar --- */
+    nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; transition: all 0.3s ease; padding: 20px 0; }
+    nav.scrolled { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); box-shadow: var(--shadow-navbar); padding: 12px 0; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a.link { font-weight: 500; color: var(--color-text-primary); transition: color 0.2s; }
+    .nav-links a.link:hover { color: var(--color-primary); }
+    .hamburger { display: none; font-size: 1.5rem; color: var(--color-primary); cursor: pointer; border: none; background: transparent; }
+
+    @media(max-width: 768px) {
+      .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-bg-white); flex-direction: column; padding: 24px; gap: 24px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path 0.3s ease-out; }
+      .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+      .hamburger { display: block; }
+    }
+
+    /* --- Hero --- */
+    #hero { padding: 160px 0 96px; background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-primary-light) 100%); min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+    .hero-container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .badge { display: inline-block; padding: 6px 12px; background: rgba(0,102,204,0.1); color: var(--color-primary-dark); font-size: 0.875rem; font-weight: 600; border-radius: var(--pill-radius); margin-bottom: 24px; }
+    .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; color: var(--color-primary-dark); margin-bottom: 24px; }
+    .hero-content p { font-size: 1.125rem; color: var(--color-text-secondary); margin-bottom: 40px; max-width: 90%; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .trust-badges { display: flex; gap: 24px; flex-wrap: wrap; }
+    .trust-badge { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--color-text-secondary); font-weight: 500; }
+    .trust-badge i { color: var(--color-success); }
+    .hero-image { position: relative; border-radius: var(--card-radius); overflow: hidden; box-shadow: var(--shadow-ambient); background: #E8F0FB; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; }
+    
+    @media(max-width: 992px) {
+      .hero-container { grid-template-columns: 1fr; gap: 48px; }
+      .hero-content { text-align: center; }
+      .hero-content p { max-width: 100%; }
+      .hero-actions { justify-content: center; }
+      .trust-badges { justify-content: center; }
+      .hero-image { display: none; } /* Focus on value prop on mobile */
+    }
+
+    /* --- Sections Baseline --- */
+    section { padding: var(--section-padding-desktop); }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; letter-spacing: -0.01em; color: inherit; }
+    .section-header p { font-size: 1.125rem; color: var(--color-text-secondary); max-width: 600px; margin: 0 auto; }
+    @media(max-width: 768px) { section { padding: var(--section-padding-mobile); } .section-header h2 { font-size: 2rem; } .section-header { margin-bottom: 40px; } }
+
+    /* --- Categorias --- */
+    #categorias { background: var(--color-bg-white); }
+    .cato-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+    .cato-card { padding: 32px 24px; background: var(--color-bg-light); border-radius: var(--card-radius); text-align: center; transition: var(--shadow-card-hover); cursor: pointer; }
+    .cato-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-ambient); background: var(--color-bg-white); }
+    .cato-card i { font-size: 2.5rem; color: var(--color-primary); margin-bottom: 24px; }
+    .cato-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+    .cato-card p { font-size: 0.875rem; color: var(--color-text-secondary); }
+    @media(max-width: 1024px) { .cato-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media(max-width: 600px) { .cato-grid { grid-template-columns: repeat(2, 1fr); } .cato-card:last-child { grid-column: span 2; } }
+
+    /* --- Diferenciais --- */
+    #diferenciais { background: var(--color-bg-dark); color: var(--color-text-white); }
+    #diferenciais .section-header p { color: rgba(255,255,255,0.8); }
+    .dif-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .dif-item { text-align: center; }
+    .dif-icon-wrapper { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .dif-item i { font-size: 1.5rem; color: var(--color-accent); }
+    .dif-item h3 { font-size: 1.25rem; margin-bottom: 16px; }
+    .dif-item p { font-size: 0.95rem; color: rgba(255,255,255,0.7); }
+    @media(max-width: 900px) { .dif-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width: 500px) { .dif-grid { grid-template-columns: 1fr; } }
+
+    /* --- Seminovos --- */
+    #seminovos { background: var(--color-accent-light); }
+    .semi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 48px; }
+    .semi-card { background: var(--color-bg-white); padding: 40px 32px; border-radius: var(--card-radius); box-shadow: var(--shadow-card); transition: transform 0.3s; }
+    .semi-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(255, 107, 0, 0.1); }
+    .semi-card i { font-size: 2rem; color: var(--color-accent); margin-bottom: 24px; }
+    .semi-card h3 { font-size: 1.25rem; margin-bottom: 16px; }
+    .semi-card p { font-size: 1rem; color: var(--color-text-secondary); }
+    .semi-action { text-align: center; }
+    .btn-orange { background: var(--color-accent); color: white; }
+    .btn-orange:hover { background: #E65A00; box-shadow: 0 4px 14px rgba(255, 107, 0, 0.3); }
+    @media(max-width: 768px) { .semi-grid { grid-template-columns: 1fr; } }
+
+    /* --- Assistencia --- */
+    #assistencia { background: var(--color-bg-white); }
+    .assist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .assist-info h2 { font-size: 2.5rem; margin-bottom: 16px; letter-spacing: -0.01em; color: var(--color-primary-dark); }
+    .assist-info p { font-size: 1.125rem; color: var(--color-text-secondary); margin-bottom: 40px; }
+    .services-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .service-item { display: flex; align-items: center; gap: 16px; font-weight: 500; }
+    .service-item i { color: var(--color-primary); font-size: 1.25rem; width: 24px; text-align: center; }
+    @media(max-width: 900px) { .assist-grid { grid-template-columns: 1fr; gap: 40px; } }
+    @media(max-width: 500px) { .services-list { grid-template-columns: 1fr; } }
+
+    /* --- Produtos Destaque --- */
+    #produtos { background: var(--color-bg-light); }
+    .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .prod-card { background: var(--color-bg-white); border-radius: var(--card-radius); overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
+    .prod-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-ambient); }
+    .prod-img { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; position: relative; }
+    .prod-img .badge-pos { position: absolute; top: 16px; right: 16px; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: white; }
+    .prod-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+    .prod-content h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; }
+    .prod-price { font-size: 1.25rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 24px; }
+    .prod-content .btn { margin-top: auto; width: 100%; border: 1px solid var(--color-success); color: var(--color-success); background: transparent; }
+    .prod-content .btn:hover { background: var(--color-success); color: white; }
+    .aviso-produtos { text-align: center; margin-bottom: 32px; font-size: 0.875rem; color: var(--color-text-secondary); font-style: italic; }
+    @media(max-width: 1024px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width: 600px) { .prod-grid { grid-template-columns: 1fr; } }
+
+    /* --- Contato --- */
+    #contato { background: var(--color-bg-white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+    .contact-info-blocks { display: flex; flex-direction: column; gap: 32px; margin-bottom: 40px; }
+    .c-block { display: flex; gap: 16px; }
+    .c-block i { font-size: 1.5rem; color: var(--color-primary); margin-top: 4px; }
+    .c-block h4 { font-size: 1.125rem; margin-bottom: 4px; }
+    .c-block p { color: var(--color-text-secondary); }
+    .map-container { border-radius: var(--card-radius); overflow: hidden; height: 100%; min-height: 400px; box-shadow: var(--shadow-ambient); }
+    .map-container iframe { width: 100%; height: 100%; border: 0; }
+    @media(max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .map-container { min-height: 300px; } }
+
+    /* --- Footer --- */
+    footer { background: #111827; color: rgba(255,255,255,0.7); padding: 80px 24px 24px; font-size: 0.875rem; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 64px; }
+    .f-logo { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 800; color: white; margin-bottom: 16px; display: block; }
+    .f-tagline { margin-bottom: 24px; }
+    .f-socials { display: flex; gap: 16px; }
+    .f-socials a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.125rem; color: white; transition: background 0.3s; }
+    .f-socials a:hover { background: var(--color-primary); }
+    .f-title { color: white; font-family: var(--font-heading); font-weight: 700; font-size: 1.125rem; margin-bottom: 24px; }
+    .f-links { list-style: none; }
+    .f-links li { margin-bottom: 12px; }
+    .f-links a:hover { color: white; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-bottom a { color: white; font-weight: 500; }
+    .footer-bottom a:hover { color: var(--color-primary-light); }
+    @media(max-width: 900px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } .footer-bottom { flex-direction: column; text-align: center; } }
+
+    /* --- WhatsApp Float --- */
+    .wpp-float { position: fixed; bottom: 32px; right: 32px; width: 60px; height: 60px; background: var(--color-whatsapp); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.25rem; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4); z-index: 999; animation: pulse 2s infinite; transition: transform 0.3s; }
+    .wpp-float:hover { transform: scale(1.1); }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="container nav-container">
+      <a href="#" class="logo">TRATO FEITO</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#diferenciais" class="link">Diferenciais</a>
+        <a href="#seminovos" class="link">Seminovos</a>
+        <a href="#assistencia" class="link">Assistência</a>
+        <a href="#produtos" class="link">Destaques</a>
+        <a href="#contato" class="link">Contato</a>
+        <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos." class="btn btn-wpp" target="_blank">Falar no WhatsApp</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <div class="badge">📍 Pomerode - SC · Centro · 6 anos no mercado</div>
+        <h1>Tecnologia nova e seminova com preço justo.</h1>
+        <p>Celulares, acessórios, JBL e assistência técnica — tudo em Pomerode, perto de você.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos." class="btn btn-wpp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+          <a href="#produtos" class="btn btn-secondary">Ver produtos</a>
+        </div>
+        <div class="trust-badges">
+          <div class="trust-badge"><i class="fa-solid fa-check"></i> Produtos testados</div>
+          <div class="trust-badge"><i class="fa-solid fa-check"></i> Seminovos com garantia</div>
+          <div class="trust-badge"><i class="fa-solid fa-check"></i> Assistência no local</div>
+        </div>
+      </div>
+      <div class="hero-image reveal" style="background: linear-gradient(135deg, #F4F6F9 0%, #C7D9F5 100%);">
+        <!-- Placeholder visual conforme instruções -->
+        <div style="text-align: center; color: var(--color-primary); padding: 40px;">
+          <i class="fa-solid fa-mobile-screen" style="font-size: 4rem; opacity: 0.5;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categorias" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>O que você encontra aqui</h2>
+        <p>Do celular novo ao seminovo, do acessório à assistência técnica.</p>
+      </div>
+      <div class="cato-grid">
+        <div class="cato-card" onclick="window.location.href='#produtos'">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Celulares</h3>
+          <p>iPhone, Samsung, Motorola — novos e seminovos</p>
+        </div>
+        <div class="cato-card" onclick="window.location.href='#produtos'">
+          <i class="fa-solid fa-volume-high"></i>
+          <h3>Som & Bluetooth</h3>
+          <p>JBL, fones de ouvido e caixas de som</p>
+        </div>
+        <div class="cato-card" onclick="window.location.href='#produtos'">
+          <i class="fa-solid fa-plug"></i>
+          <h3>Acessórios</h3>
+          <p>Capas, películas, carregadores e cabos</p>
+        </div>
+        <div class="cato-card" onclick="window.location.href='#produtos'">
+          <i class="fa-solid fa-laptop"></i>
+          <h3>Informática</h3>
+          <p>Notebooks, periféricos e suprimentos</p>
+        </div>
+        <div class="cato-card" onclick="window.location.href='#assistencia'">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Assistência</h3>
+          <p>Conserto rápido de celulares e computadores</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Por que comprar na Trato Feito?</h2>
+        <p>6 anos servindo Pomerode com qualidade e preço honesto.</p>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-item">
+          <div class="dif-icon-wrapper"><i class="fa-solid fa-tag"></i></div>
+          <h3>Preço justo</h3>
+          <p>Novos e seminovos para todos os bolsos. Sem enganação, sem surpresa.</p>
+        </div>
+        <div class="dif-item">
+          <div class="dif-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Produtos testados</h3>
+          <p>Todo seminovo passa por checagem completa antes de sair da loja.</p>
+        </div>
+        <div class="dif-item">
+          <div class="dif-icon-wrapper"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Suporte local</h3>
+          <p>Assistência técnica aqui mesmo — sem precisar ir a Blumenau ou Joinville.</p>
+        </div>
+        <div class="dif-item">
+          <div class="dif-icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>No centro de Pomerode</h3>
+          <p>Fácil de chegar, fácil de estacionar. A loja que você conhece pessoalmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="seminovos" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Seminovos com garantia</h2>
+        <p>Economize até 50% em relação ao novo. Qualidade garantida.</p>
+      </div>
+      <div class="semi-grid">
+        <div class="semi-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Selecionados a dedo</h3>
+          <p>Só vendemos o que passou em nosso processo de avaliação técnica.</p>
+        </div>
+        <div class="semi-card">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Garantia inclusa</h3>
+          <p>Todos os seminovos saem com garantia de funcionamento.</p>
+        </div>
+        <div class="semi-card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Suporte pós-venda</h3>
+          <p>Deu problema? A gente resolve. Você não fica na mão.</p>
+        </div>
+      </div>
+      <div class="semi-action">
+        <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Quero%20ver%20os%20celulares%20seminovos%20dispon%C3%ADveis." target="_blank" class="btn btn-orange">Ver seminovos disponíveis &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistencia" class="reveal">
+    <div class="container assist-grid">
+      <div class="assist-info">
+        <h2>Assistência técnica aqui do lado</h2>
+        <p>Rápido, confiável e sem precisar sair de Pomerode.</p>
+        <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20assist%C3%AAncia%20t%C3%A9cnica." target="_blank" class="btn btn-secondary" style="border: 1px solid var(--color-border);">Solicitar orçamento &rarr;</a>
+      </div>
+      <div class="services-list">
+        <div class="service-item"><i class="fa-solid fa-display"></i> Troca de tela</div>
+        <div class="service-item"><i class="fa-solid fa-battery-full"></i> Troca de bateria</div>
+        <div class="service-item"><i class="fa-solid fa-bolt"></i> Reparo de conector de carga</div>
+        <div class="service-item"><i class="fa-solid fa-stethoscope"></i> Diagnóstico gratuito</div>
+        <div class="service-item"><i class="fa-solid fa-laptop"></i> Manutenção de notebook / PC</div>
+        <div class="service-item"><i class="fa-solid fa-hard-drive"></i> Recuperação de dados</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Em destaque agora</h2>
+        <p>Estoque atualizado — fale no WhatsApp para confirmar disponibilidade.</p>
+      </div>
+      <p class="aviso-produtos">Produtos e preços a preencher com o proprietário.</p>
+      <div class="prod-grid">
+        <div class="prod-card">
+          <div class="prod-img" style="background: #E8F0FB;">
+            <span class="badge-pos" style="background: #FF6B00;">SEMINOVO</span>
+            <i class="fa-solid fa-mobile-screen" style="font-size: 3rem; color: #acc5e8;"></i>
+          </div>
+          <div class="prod-content">
+            <h3>iPhone [a confirmar]</h3>
+            <div class="prod-price">R$ ---</div>
+            <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Tenho%20interesse%20no%20iPhone%20seminovo." target="_blank" class="btn">Garantir esse &rarr;</a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background: #E8F0FB;">
+            <span class="badge-pos" style="background: #16A34A;">NOVO</span>
+            <i class="fa-solid fa-mobile-screen" style="font-size: 3rem; color: #acc5e8;"></i>
+          </div>
+          <div class="prod-content">
+            <h3>Samsung Galaxy [a confirmar]</h3>
+            <div class="prod-price">R$ ---</div>
+            <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Samsung%20Galaxy." target="_blank" class="btn">Garantir esse &rarr;</a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background: #F4F6F9;">
+            <span class="badge-pos" style="background: #16A34A;">NOVO</span>
+            <i class="fa-solid fa-volume-high" style="font-size: 3rem; color: #d0d7e2;"></i>
+          </div>
+          <div class="prod-content">
+            <h3>JBL [a confirmar]</h3>
+            <div class="prod-price">R$ ---</div>
+            <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Tenho%20interesse%20na%20caixa%20de%20som%20JBL." target="_blank" class="btn">Garantir essa &rarr;</a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <div class="prod-img" style="background: #F4F6F9;">
+            <span class="badge-pos" style="background: #16A34A;">NOVO</span>
+            <i class="fa-solid fa-plug" style="font-size: 3rem; color: #d0d7e2;"></i>
+          </div>
+          <div class="prod-content">
+            <h3>Acessório [a confirmar]</h3>
+            <div class="prod-price">R$ ---</div>
+            <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20acess%C3%B3rios." target="_blank" class="btn">Garantir item &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="reveal">
+    <div class="container contact-grid">
+      <div>
+        <div class="section-header" style="text-align: left;">
+          <h2>Venha nos visitar</h2>
+          <p>Estamos no centro de Pomerode, prontos para te atender.</p>
+        </div>
+        <div class="contact-info-blocks">
+          <div class="c-block">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Endereço</h4>
+              <p>Rua Luiz Abry, 1393 — Sala 05<br>Centro, Pomerode — SC<br>CEP: 89107-000</p>
+            </div>
+          </div>
+          <div class="c-block">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Horário de Funcionamento</h4>
+              <p>Horário — consulte no WhatsApp</p>
+            </div>
+          </div>
+          <div class="c-block">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Contato</h4>
+              <p>(47) 99653-4397<br>lojatratofeitopomerode@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos." target="_blank" class="btn btn-wpp"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Rua+Luiz+Abry+1393+Centro+Pomerode+SC&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="f-logo">TRATO FEITO</a>
+        <p class="f-tagline">Eletrônicos novos e seminovos em Pomerode</p>
+        <div class="f-socials">
+          <a href="https://www.instagram.com/lojatratofeito/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/lojatratofeitopomerode/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/5547996534397" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="f-title">Navegação</h4>
+        <ul class="f-links">
+          <li><a href="#diferenciais">Nossos Diferenciais</a></li>
+          <li><a href="#seminovos">Linha de Seminovos</a></li>
+          <li><a href="#assistencia">Assistência Técnica</a></li>
+          <li><a href="#produtos">Produtos em Destaque</a></li>
+          <li><a href="#contato">Localização e Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="f-title">Contato Direto</h4>
+        <ul class="f-links">
+          <li><i class="fa-solid fa-phone" style="width: 20px;"></i> (47) 99653-4397</li>
+          <li><i class="fa-brands fa-whatsapp" style="width: 20px;"></i> Fale via WhatsApp</li>
+          <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> lojatratofeito<br>pomerode@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Trato Feito Pomerode. Todos os direitos reservados.</p>
+      <p>Site desenvolvido por <a href="https://stratai-consulting-site.netlify.app/" target="_blank" rel="noopener">StratAI Consulting</a></p>
+    </div>
+  </footer>
+
+  <a id="whatsapp-float" class="wpp-float" href="https://wa.me/5547996534397?text=Ol%C3%A1!%20Vim%20pelo%20site." target="_blank" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Navbar Scroll Effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-links .link');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
