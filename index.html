@@ -126,7 +126,7 @@
     .theme-btn.active { background: var(--color-bg-white); color: var(--color-primary); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     html[data-theme="brand"] .theme-selector { background: rgba(255,255,255,0.05); }
 
-    .logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); }
+    .logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); display: flex; align-items: center; margin-right: 48px; text-decoration: none; }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a.link { font-weight: 500; color: var(--color-text-primary); transition: color 0.2s; }
     .nav-links a.link:hover { color: var(--color-primary); }
@@ -272,7 +272,9 @@
 
   <nav id="nav">
     <div class="container nav-container">
-      <a href="#" class="logo">TRATO FEITO</a>
+      <a href="#" class="logo">
+        <img src="./images/logo.png" alt="Trato Feito" style="height: 52px; width: auto; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      </a>
       <div class="nav-links" id="nav-links">
         <a href="#diferenciais" class="link">Diferenciais</a>
         <a href="#seminovos" class="link">Seminovos</a>
